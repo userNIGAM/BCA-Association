@@ -50,7 +50,7 @@ export default function NewsSection() {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,               // Enable autoplay
-        autoplaySpeed: 5000,          // Set autoplay speed to 3 seconds (3000 ms)
+        autoplaySpeed: 3000,          // Set autoplay speed to 3 seconds (3000 ms)
         responsive: [
             {
                 breakpoint: 1024,
@@ -64,11 +64,11 @@ export default function NewsSection() {
     };
 
     return (
-        <div className="py-8 px-4 rounded-lg w-full mx-auto">
+        <div className="py-8 px-4 rounded-lg max-w-6xl mx-auto text-center">
             <SectionHeader title="News & Notices" />
-            <Slider {...settings}>
+            <Slider {...settings} >
                 {newsData.map((newsItem, index) => (
-                    <div key={index} className="px-2">
+                    <div key={index} className="px-2 m-5">
                         <News
                             title={newsItem.title}
                             description={newsItem.description}

@@ -1,34 +1,54 @@
-'use client'
-import { motion } from 'framer-motion';
-
+"use client";
+import { motion } from "framer-motion";
+import SectionHeader from "./SectionHeader";
 const Hero = () => {
   return (
-    <section className="relative h-96 bg-gradient-to-r pt-6 from-blue-900 to-gray-900 flex flex-col justify-center items-center">
-      <div className="absolute inset-0">
-        <img
-          src="data:image/jpeg;base64,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"
-          alt="Background"
-          className="w-full h-full object-cover opacity-40"
-        />
+    <div className="max-w-7xl mx-auto my-10 text-center -z-10">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-8  font-extralight pt-6 rounded-lg  space-y-6 md:space-y-0 md:space-x-8 max-w-6xl mx-auto">
+        {/* Text Section with Animation */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center md:text-left"
+        >
+          <SectionHeader
+            title="BCA Association MMC"
+            subtitle="Learn more about our association and our mission."
+          />
+          <p className="text-md leading-relaxed text-justify px-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            className="mt-4 px-6 py-2  bg-blue-800 text-white  font-semibold rounded-full shadow hover:bg-red-600 transition-colors"
+          >
+            Contact Us
+          </motion.button>
+        </motion.div>
+
+        {/* Image Section with Animation */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          className="rounded-lg overflow-hidden shadow-md"
+        >
+          <img
+            src="/images/bcaAssociation.jpg"
+            alt="BCA Association MMC"
+            className="w-auto h-auto"
+          />
+        </motion.div>
       </div>
-      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-      <motion.div
-        className="relative z-10 text-center text-white"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <h1 className="text-5xl md:text-7xl font-extrabold drop-shadow-lg">
-          BCA Association MMC
-        </h1>
-        <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed drop-shadow-md">
-          Join us in fostering a vibrant community for students in the Bachelor of Computer Application program at Mechi Multiple Campus. Together, we grow, learn, and succeed!
-        </p>
-        
-      </motion.div>
-    </section>
+    </div>
   );
 };
 
 export default Hero;
-

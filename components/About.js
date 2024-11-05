@@ -4,20 +4,20 @@ import SectionHeader from "./SectionHeader";
 import { motion } from "framer-motion";
 const About = () => {
   return (
-    <div>
-      <SectionHeader
-        title="BCA Association MMC"
-        subtitle="Learn more about our association and our mission."
-      />
-      <div className="flex flex-col md:flex-row items-center justify-between gap-8  font-extralight pt-8 rounded-lg shadow-lg space-y-6 md:space-y-0 md:space-x-8 max-w-6xl mx-auto">
+    <div className="max-w-6xl mx-auto mt-24 text-center -z-10">
+      <div className="flex flex-col-reverse md:flex-row-reverse items-center justify-around gap-8  font-extralight pt-6 rounded-lg  space-y-6 md:space-y-0 md:space-x-8 max-w-6xl mx-auto">
         {/* Text Section with Animation */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center md:text-left"
+          className="text-center "
         >
-          <p className="text-lg leading-relaxed text-justify">
+          <SectionHeader
+            title="About Us"
+            subtitle="Learn more about our association and our mission."
+          />
+          <p className="text-md leading-relaxed text-justify">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -42,7 +42,7 @@ const About = () => {
           className="rounded-lg overflow-hidden shadow-md"
         >
           <img
-            src="/bcaAssociation.jpg"
+            src="/images/association2.jpg"
             alt="BCA Association MMC"
             className="w-auto h-auto"
           />

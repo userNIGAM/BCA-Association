@@ -5,3 +5,13 @@
 /* Import slick-carousel CSS */
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+
+.backdrop-blur-md {
+    backdrop-filter: blur(14px); /* Adjust the blur radius as needed */
+  }
+  nav {
+    background-color: rgba(255, 255, 255, 0.5) !important; /* Darker transparent background to fade colors */
+  }
+  html{
+    scroll-behavior: smooth;
+  }
