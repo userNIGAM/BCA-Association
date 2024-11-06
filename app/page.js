@@ -1,9 +1,9 @@
 
-import About from '@/components/About'
+import About from '@/components/home/About'
 import ContactSection from '@/components/ContactSection'
-import EventSection from '@/components/EventSection'
-import Hero from '@/components/Hero'
-import NewsSection from '@/components/NewsSection'
+import EventSection from '@/components/home/EventSection'
+import Hero from '@/components/home/Hero'
+import NewsSection from '@/components/home/NewsSection'
 import React from 'react'
 
 const page = () => {

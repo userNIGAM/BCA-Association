@@ -1,8 +1,8 @@
 'use client'
 import { useEffect } from 'react';
 import Slider from "react-slick";
-import News from "./News";
-import SectionHeader from "./SectionHeader";
+import News from "../News";
+import SectionHeader from "../SectionHeader";
 import Link from "next/link";
 import AOS from 'aos';
 import 'aos/dist/aos.css';

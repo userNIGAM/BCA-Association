@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import SectionHeader from "./SectionHeader";
+import SectionHeader from "../SectionHeader";
 import { motion } from "framer-motion";
 import AOS from 'aos';
 import 'aos/dist/aos.css';

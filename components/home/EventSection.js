@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from 'react';
-import SectionHeader from './SectionHeader';
-import News from './News';
+import SectionHeader from '../SectionHeader';
+import News from '../News';
 import Link from 'next/link';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
