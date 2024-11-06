@@ -1,17 +1,26 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import SectionHeader from "./SectionHeader";
 import { motion } from "framer-motion";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const About = () => {
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({ duration: 1200, once: false }); // AOS animations will run once
+  }, []);
+
   return (
-    <div className="max-w-6xl mx-auto mt-24 text-center -z-10">
-      <div className="flex flex-col-reverse md:flex-row-reverse items-center justify-around gap-8  font-extralight pt-6 rounded-lg  space-y-6 md:space-y-0 md:space-x-8 max-w-6xl mx-auto">
+    <div className="max-w-6xl mx-auto mt-24 text-center -z-10" data-aos="fade-up">
+      <div className="flex flex-col-reverse md:flex-row-reverse items-center justify-around gap-8 font-extralight pt-6 rounded-lg space-y-6 md:space-y-0 md:space-x-8 max-w-6xl mx-auto">
         {/* Text Section with Animation */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center "
+          className="text-center"
+          data-aos="fade-right" // AOS for scroll animation
         >
           <SectionHeader
             title="About Us"
@@ -28,7 +37,7 @@ const About = () => {
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
-            className="mt-4 px-6 py-2  bg-blue-800 text-white  font-semibold rounded-full shadow hover:bg-red-600 transition-colors"
+            className="mt-4 px-6 py-2 bg-blue-800 text-white font-semibold rounded-full shadow hover:bg-red-600 transition-colors"
           >
             Read More
           </motion.button>
@@ -40,6 +49,7 @@ const About = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           className="rounded-lg overflow-hidden shadow-md"
+          data-aos="fade-left" // AOS for scroll animation
         >
           <img
             src="/images/association2.jpg"

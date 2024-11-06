@@ -1,33 +1,35 @@
 "use client";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import SectionHeader from "./SectionHeader";
+
 const Hero = () => {
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({ duration: 1200, once: false }); // AOS animations run once on scroll
+  }, []);
+
   return (
-    <div className="max-w-7xl mx-auto my-10 text-center -z-10">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-8  font-extralight pt-6 rounded-lg  space-y-6 md:space-y-0 md:space-x-8 max-w-6xl mx-auto">
+    <div className="max-w-7xl mx-auto my-10 text-center -z-10" data-aos="fade-up">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-8 font-extralight pt-6 rounded-lg space-y-6 md:space-y-0 md:space-x-8 max-w-6xl mx-auto">
         {/* Text Section with Animation */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center md:text-left"
+          className="text-center md:text-center"
+          data-aos="fade-right" // AOS scroll animation
         >
           <SectionHeader
             title="BCA Association MMC"
-            subtitle="Learn more about our association and our mission."
+            subtitle="Non-political governing body of BCA students at Mechi Multiple Campus."
           />
-          <p className="text-md leading-relaxed text-justify px-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <p className="text-md leading-relaxed text-justify px-4"></p>
           <motion.button
             whileHover={{ scale: 1.05 }}
-            className="mt-4 px-6 py-2  bg-blue-800 text-white  font-semibold rounded-full shadow hover:bg-red-600 transition-colors"
+            className="mt-4 px-6 py-2 bg-blue-800 text-white font-semibold rounded-full shadow hover:bg-red-600 transition-colors"
           >
             Contact Us
           </motion.button>
@@ -38,12 +40,14 @@ const Hero = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="rounded-lg overflow-hidden shadow-md"
+          className="rounded-lg overflow-hidden"
+          data-aos="fade-left" // AOS scroll animation
         >
           <img
-            src="/images/bcaAssociation.jpg"
+            src="/images/association.png"
             alt="BCA Association MMC"
-            className="w-auto h-auto"
+            height={350}
+            width={350}
           />
         </motion.div>
       </div>

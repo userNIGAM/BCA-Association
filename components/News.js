@@ -1,4 +1,4 @@
-// components/News.js
+'use client'
 import { motion } from "framer-motion";
 
 export default function News({ title, description, date, image }) {
@@ -14,7 +14,7 @@ export default function News({ title, description, date, image }) {
                     alt={title} 
                     className="w-full h-full object-cover transform transition duration-300 hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent opacity-70"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent opacity-80"></div>
                 <h3 className="absolute bottom-4 left-4 text-white font-bold text-lg z-10 drop-shadow-lg">
                     {title}
                 </h3>
