@@ -24,9 +24,9 @@ const Navbar = () => {
           </Link>
           <div className="hidden md:flex space-x-6">
             <Link href="/" className="text-blue-800 font-bold hover:text-blue-600 transition duration-200">Home</Link>
-            <Link href="/about" className="text-blue-800 font-bold hover:text-blue-600 transition duration-200">About</Link>
-            <Link href="/news" className="text-blue-800 font-bold hover:text-blue-600 transition duration-200">News & Notices</Link>
+            {/* <Link href="/about" className="text-blue-800 font-bold hover:text-blue-600 transition duration-200">About</Link> */}
             <Link href="/teams" className="text-blue-800 font-bold hover:text-blue-600 transition duration-200">Teams</Link>
+            <Link href="/news" className="text-blue-800 font-bold hover:text-blue-600 transition duration-200">News & Notices</Link>
             <Link href="/contact" className="text-blue-800 font-bold hover:text-blue-600 transition duration-200">Contact</Link>
           </div>
           <div className="md:hidden">
@@ -59,9 +59,9 @@ const Navbar = () => {
           >
             <div className="flex flex-col w-full">
               <Link href="/" className="block px-4 py-4 text-blue-800 hover:bg-blue-50 transition duration-200 text-center" onClick={handleLinkClick}>Home</Link>
-              <Link href="/about" className="block px-4 py-4 text-blue-800 hover:bg-blue-50 transition duration-200 text-center" onClick={handleLinkClick}>About</Link>
-              <Link href="/news" className="block px-4 py-4 text-blue-800 hover:bg-blue-50 transition duration-200 text-center" onClick={handleLinkClick}>News & Notices</Link>
+              {/* <Link href="/about" className="block px-4 py-4 text-blue-800 hover:bg-blue-50 transition duration-200 text-center" onClick={handleLinkClick}>About</Link> */}
               <Link href="/teams" className="block px-4 py-4 text-blue-800 hover:bg-blue-50 transition duration-200 text-center" onClick={handleLinkClick}>Teams</Link>
+              <Link href="/news" className="block px-4 py-4 text-blue-800 hover:bg-blue-50 transition duration-200 text-center" onClick={handleLinkClick}>News & Notices</Link>
               <Link href="/contact" className="block px-4 py-4 text-blue-800 hover:bg-blue-50 transition duration-200 text-center" onClick={handleLinkClick}>Contact</Link>
             </div>
           </motion.div>
