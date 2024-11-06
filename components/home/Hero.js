@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import SectionHeader from "../SectionHeader";
+import TSParticles from "../extra/TSparticle";
 
 const Hero = () => {
   // Initialize AOS
@@ -12,8 +13,11 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="max-w-7xl mx-auto my-10 text-center -z-10" data-aos="fade-up">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-8 font-extralight pt-6 rounded-lg space-y-6 md:space-y-0 md:space-x-8 max-w-6xl mx-auto">
+    <div
+      className="max-w-7xl min-h-96 mx-auto my-10 text-center relative -z-10"
+      data-aos="fade-up"
+    >
+      <div className=" absolute top-0 left-0 h-full min-h-96 w-full z-40 flex flex-col md:flex-row items-center justify-between gap-8 font-extralight pt-6 rounded-lg space-y-6 md:space-y-0 md:space-x-8 max-w-6xl mx-auto">
         {/* Text Section with Animation */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -50,6 +54,9 @@ const Hero = () => {
             width={350}
           />
         </motion.div>
+      </div>
+      <div className="absolute top-0 left-0 h-full min-h-96 w-full z-30">
+        <TSParticles />
       </div>
     </div>
   );
