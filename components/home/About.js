@@ -19,7 +19,7 @@ const About = () => {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center"
+          className="text-center p-2"
           data-aos="fade-right" // AOS for scroll animation
         >
           <SectionHeader

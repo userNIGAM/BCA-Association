@@ -82,6 +82,7 @@ const EventSection = () => {
             {" "}
             {/* AOS animation applied here */}
             <News
+              id={newsItem.id}
               title={newsItem.title}
               description={newsItem.description}
               date={newsItem.date}

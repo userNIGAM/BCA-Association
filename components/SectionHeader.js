@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 
 const SectionHeader = ({ title, subtitle }) => {
   return (
+    <section>
     <div className="text-center my-8">
       <motion.h2
         className="text-3xl md:text-4xl font-bold text-blue-800"
@@ -30,6 +31,7 @@ const SectionHeader = ({ title, subtitle }) => {
         transition={{ duration: 1 }}
       ></motion.div>
     </div>
+    </section>
   );
 };
 

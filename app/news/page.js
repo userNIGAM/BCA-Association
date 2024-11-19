@@ -28,7 +28,7 @@ const NewsGrid = () => {
 
   return (
     <>
-      <div className="max-w-6xl mx-auto ">
+      <div className="max-w-6xl mx-auto pt-20">
         <SectionHeader title="News & Notices" />
 
         {/* News Grid */}

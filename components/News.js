@@ -4,6 +4,7 @@ import Link from "next/link";
 
 export default function News({ title, description, date, image, id }) {
   return (
+    <section>
     <motion.div
       whileHover={{ scale: 1.05 }}
       className="relative bg-white  rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:shadow-2xl w-full" // Fixed width
@@ -42,5 +43,6 @@ export default function News({ title, description, date, image, id }) {
         </Link>
       </div>
     </motion.div>
+    </section>
   );
 }

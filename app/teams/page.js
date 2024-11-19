@@ -49,7 +49,7 @@ const TeamsPage = () => {
 
   return (
     <>
-    <div className="max-w-6xl mx-auto my-10 text-center bg-white">
+    <div className="max-w-6xl relative mx-auto text-center bg-white pt-20">
       {/* Header Section */}
       <SectionHeader title="Meet Our Team" subtitle="The leadership behind BCA Association MMC" />
 
