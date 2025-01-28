@@ -130,15 +130,10 @@ const Navbar = () => {
             <a href="#" aria-label="Facebook" className="hover:text-blue-600">
               <FaFacebook className="text-xl" />
             </a>
-            <a href="#" aria-label="Twitter" className="hover:text-blue-600">
-              <FaTwitter className="text-xl" />
+            <a href="#" aria-label="Facebook" className="hover:text-blue-600">
+              <FaEnvelope className="text-xl" />
             </a>
-            <a href="#" aria-label="Instagram" className="hover:text-blue-600">
-              <FaInstagram className="text-xl" />
-            </a>
-            <a href="#" aria-label="YouTube" className="hover:text-blue-600">
-              <FaYoutube className="text-xl" />
-            </a>
+          
           </div>
         </motion.div>
       )}

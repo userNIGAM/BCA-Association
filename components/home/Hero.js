@@ -14,7 +14,7 @@ const Hero = () => {
 
   return (
     <div
-      className="max-w-7xl min-h-96 mx-auto my-10 text-center relative -z-10"
+      className="max-w-7xl min-h-96 mx-auto my-10 text-center relative -z-10 py-"
       data-aos="fade-up"
     >
       <div className=" absolute top-0 left-0 h-full min-h-96 w-full z-40 flex flex-col md:flex-row items-center justify-between gap-8 font-extralight pt-6 rounded-lg space-y-6 md:space-y-0 md:space-x-8 max-w-6xl mx-auto">
