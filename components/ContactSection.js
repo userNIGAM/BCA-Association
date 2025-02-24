@@ -80,62 +80,8 @@ export default function ContactSection() {
                 <SectionHeader title="Get in Touch"/>
 
                 {/* Flex Container */}
-                <div className="flex flex-col lg:flex-row gap-6">
-                    {/* Testimonials Carousel */}
-                    <div className="lg:w-1/3 flex flex-col items-center" data-aos="fade-up">
-                        <div className="w-full h-auto max-w-md bg-gradient-to-r from-blue-500 to-blue-900 text-white rounded-lg shadow-xl overflow-hidden relative p-6">
-                            <div className="carousel relative overflow-hidden">
-                                <div className="carousel-inner relative w-full overflow-hidden">
-                                    {/* Carousel Slides */}
-                                    {testimonials.map((testimonial, index) => (
-                                        <div
-                                            key={index}
-                                            className={`carousel-item ${index === currentSlide ? 'block' : 'hidden'} transition-transform duration-700 ease-in-out transform-gpu scale-105`}
-                                        >
-                                            <div className="flex items-center">
-                                                <img
-                                                    src={testimonial.photo}
-                                                    alt={testimonial.name}
-                                                    className="w-16 h-16 rounded-full border-4 border-white mr-4 shadow-lg"
-                                                />
-                                                <div>
-                                                    <p className="text-base font-semibold mb-2 italic leading-tight">
-                                                        "{testimonial.message}"
-                                                    </p>
-                                                    <p className="text-sm opacity-75">- {testimonial.name}, {testimonial.post}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                {/* Carousel Navigation */}
-                                <button
-                                    className="absolute top-1/2 -left-8 transform -translate-y-1/2 bg-white text-yellow-500 p-2 rounded-full shadow-lg carousel-prev hover:bg-yellow-500 hover:text-white transition-all"
-                                    onClick={prevSlide}
-                                >
-                                    <i className="bx bx-chevron-left"></i>
-                                </button>
-                                <button
-                                    className="absolute top-1/2 -right-8 transform -translate-y-1/2 bg-white text-yellow-500 p-2 rounded-full shadow-lg carousel-next hover:bg-yellow-500 hover:text-white transition-all"
-                                    onClick={nextSlide}
-                                >
-                                    <i className="bx bx-chevron-right"></i>
-                                </button>
-
-                                {/* Carousel Indicators */}
-                                <div className="flex justify-center mt-4">
-                                    {testimonials.map((_, index) => (
-                                        <button
-                                            key={index}
-                                            className={`carousel-indicator bg-white rounded-full w-2 h-2 mx-1 ${index === currentSlide ? 'bg-yellow-500' : ''}`}
-                                            onClick={() => showSlide(index)}
-                                        ></button>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div className="flex flex-col lg:flex-row gap-6 justify-center">
+                  
 
                     {/* Contact Form */}
                     <div className="lg:w-1/3 bg-transparent text-gray-800 rounded-lg shadow-lg p-6" data-aos="fade-right">
