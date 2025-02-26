@@ -7,11 +7,30 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .backdrop-blur-md {
-    backdrop-filter: blur(14px); /* Adjust the blur radius as needed */
-  }
-  nav {
-    background-color: rgba(255, 255, 255, 0.5) !important; /* Darker transparent background to fade colors */
-  }
-  html{
-    scroll-behavior: smooth;
-  }
+  backdrop-filter: blur(14px); /* Adjust the blur radius as needed */
+}
+nav {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ) !important; /* Darker transparent background to fade colors */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.goodScroll::-webkit-scrollbar {
+  width: 10px;
+}
+.goodScroll::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 0, 0, 0.178);
+  border-radius: 10px;
+}
+.goodScroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.goodScroll::-webkit-scrollbar-thumb:hover {
+  background: #5555554b;
+}

@@ -18,7 +18,10 @@ const About = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto mt-24 text-center -z-10" data-aos="fade-up">
+    <div
+      className="max-w-6xl mx-auto mt-24 text-center -z-10"
+      data-aos="fade-up"
+    >
       <div className="flex flex-col-reverse md:flex-row-reverse items-center justify-around gap-8 font-extralight pt-6 rounded-lg space-y-6 md:space-y-0 md:space-x-8 max-w-6xl mx-auto">
         {/* Text Section with Animation */}
         <motion.div
@@ -33,12 +36,14 @@ const About = () => {
             subtitle="Learn more about our association and our mission."
           />
           <p className="text-md leading-relaxed text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
+            The BCA Association - MMC is a non-political student organization at
+            Mechi Multiple Campus, dedicated to fostering technical skills,
+            academic growth, and community engagement among BCA students. It
+            organizes workshops, seminars, hackathons, coding competitions, and
+            networking events, helping students stay updated with industry
+            trends and enhancing their practical knowledge. The association also
+            advocates for student concerns and promotes extracurricular
+            activities, creating a well-rounded learning environment.
           </p>
 
           {/* AnimatePresence for smooth transition */}
@@ -51,11 +56,11 @@ const About = () => {
                 transition={{ duration: 0.5 }}
                 className="text-md leading-relaxed text-justify mt-4 overflow-hidden"
               >
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                officia deserunt mollit anim id est laborum. Curabitur convallis
-                tortor a mauris tristique, ut placerat est gravida. Donec in
-                scelerisque tortor. Phasellus eu augue quis arcu volutpat semper
-                id nec nisl.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum. Curabitur
+                convallis tortor a mauris tristique, ut placerat est gravida.
+                Donec in scelerisque tortor. Phasellus eu augue quis arcu
+                volutpat semper id nec nisl.
               </motion.p>
             )}
           </AnimatePresence>
@@ -74,7 +79,7 @@ const About = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="rounded-lg overflow-hidden shadow-md"
+          className="rounded-lg overflow-hidden shadow-md min-w-[600px]"
           data-aos="fade-left" // AOS for scroll animation
         >
           <img
