@@ -1,7 +1,7 @@
 import ContactSection from "@/components/ContactSection";
 import News from "@/components/News";
 import SectionHeader from "@/components/SectionHeader";
-import { fetchEvents } from "../admin/[...type]/page";
+import { fetchEvents } from "../admin/[type]/page";
 
 const page = async () => {
   const events = await fetchEvents();

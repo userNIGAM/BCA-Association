@@ -34,3 +34,21 @@ html {
 .goodScroll::-webkit-scrollbar-thumb:hover {
   background: #5555554b;
 }
+
+.glowing-bg {
+  animation: tilt 5s infinite;
+}
+
+@keyframes tilt {
+  0%,
+  50%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0.5deg);
+  }
+  75% {
+    transform: rotate(-0.5deg);
+  }
+}
