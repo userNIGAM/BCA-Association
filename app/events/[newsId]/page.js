@@ -2,8 +2,12 @@ import NewsMain from "@/components/events/NewsMain";
 import React from "react";
 
 async function fetchSingleNews(id) {
-  const res = await fetch(process.env.NEXT_PUBLIC_URL + `/api/events/${id}`);
-  return res.json();
+  try {
+    const res = await fetch(process.env.NEXT_PUBLIC_URL + `/api/events/${id}`);
+    return res.json();
+  } catch (error) {
+    return { status: "error", message: error.message };
+  }
 }
 
 async function page({ params }) {

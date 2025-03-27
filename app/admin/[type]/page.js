@@ -5,13 +5,21 @@ import { redirect } from "next/navigation";
 import React from "react";
 
 export const fetchEvents = async () => {
-  const res = await fetch(process.env.NEXT_PUBLIC_URL + "/api/events");
-  return res.json();
+  try {
+    const res = await fetch(process.env.NEXT_PUBLIC_URL + "/api/events");
+    return res.json();
+  } catch (error) {
+    return { status: "error", message: error.message };
+  }
 };
 
 export const fetchTickets = async () => {
-  const res = await fetch(process.env.NEXT_PUBLIC_URL + "/api/ticket");
-  return res.json();
+  try {
+    const res = await fetch(process.env.NEXT_PUBLIC_URL + "/api/ticket");
+    return res.json();
+  } catch (error) {
+    return { status: "error", message: error.message };
+  }
 };
 
 async function page({ params }) {

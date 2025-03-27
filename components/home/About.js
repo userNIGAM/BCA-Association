@@ -22,7 +22,7 @@ const About = () => {
       className="max-w-6xl mx-auto mt-24 text-center -z-10"
       data-aos="fade-up"
     >
-      <div className="flex flex-col-reverse md:flex-row-reverse items-center justify-around gap-8 font-extralight pt-6 rounded-lg space-y-6 md:space-y-0 md:space-x-8 max-w-6xl mx-auto">
+      <div className="flex flex-col-reverse xl:flex-row-reverse items-center justify-around gap-8 font-extralight pt-6 rounded-lg max-w-6xl mx-auto px-5">
         {/* Text Section with Animation */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -79,13 +79,13 @@ const About = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="rounded-lg overflow-hidden shadow-md min-w-[600px]"
+          className="rounded-lg overflow-hidden shadow-md xl:min-w-[600px] min-w-full"
           data-aos="fade-left" // AOS for scroll animation
         >
           <img
             src="/images/association2.jpg"
             alt="BCA Association MMC"
-            className="w-auto h-auto"
+            className="w-auto h-auto object-cover"
           />
         </motion.div>
       </div>
