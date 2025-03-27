@@ -6,7 +6,7 @@ import { fetchEvents } from "../admin/[type]/page";
 const page = async () => {
   const events = await fetchEvents();
   if (events.status !== "success") {
-    throw new Error(events.message);
+    return <div>{events.message}</div>;
   }
   const data = events.data;
   return (

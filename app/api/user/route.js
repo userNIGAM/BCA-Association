@@ -1,7 +1,7 @@
 import bcrypt from "bcryptjs";
 import { cookies } from "next/headers";
 
-const passwordList = ["praz", "sidx"];
+const passwordList = ["praz", "sank", "kaka"];
 
 export async function POST(request) {
   const res = await request.json();
