@@ -155,7 +155,7 @@ const Navbar = () => {
             href="/teams"
             className="text-blue-800 font-normal hover:text-blue-600 transition duration-200"
           >
-            TEAM
+            Team
           </Link>
           <Link
             href="/events"
