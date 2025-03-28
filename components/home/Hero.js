@@ -52,7 +52,6 @@ const Hero = () => {
             alt="BCA Association MMC"
             height={350}
             width={350}
-            cl
           />
         </motion.div>
       </div>
