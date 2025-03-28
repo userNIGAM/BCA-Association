@@ -38,12 +38,12 @@ const About = () => {
           <p className="text-md leading-relaxed text-justify">
             The BCA Association - MMC is a non-political student organization at
             Mechi Multiple Campus, dedicated to fostering technical skills,
-            academic growth, and community engagement among BCA students. It
-            organizes workshops, seminars, hackathons, coding competitions, and
-            networking events, helping students stay updated with industry
-            trends and enhancing their practical knowledge. The association also
-            advocates for student concerns and promotes extracurricular
-            activities, creating a well-rounded learning environment.
+            academic growth, and community engagement among BCA students. We
+            organize workshops, seminars, hackathons, coding competitions, and
+            networking events to help students stay updated with industry trends
+            and enhance their practical knowledge. Additionally, we advocate for
+            student concerns and promote extracurricular activities, creating a
+            well-rounded learning environment.
           </p>
 
           {/* AnimatePresence for smooth transition */}
@@ -56,11 +56,11 @@ const About = () => {
                 transition={{ duration: 0.5 }}
                 className="text-md leading-relaxed text-justify mt-4 overflow-hidden"
               >
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum. Curabitur
-                convallis tortor a mauris tristique, ut placerat est gravida.
-                Donec in scelerisque tortor. Phasellus eu augue quis arcu
-                volutpat semper id nec nisl.
+                Our aim is to bridge the gap between academic learning and industry
+                requirements by providing hands-on experiences, mentorship, and
+                collaborative opportunities. Through various initiatives, we empower
+                students to innovate, build, and contribute to the ever-evolving field of
+                technology.
               </motion.p>
             )}
           </AnimatePresence>
