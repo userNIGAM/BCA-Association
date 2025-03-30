@@ -2,8 +2,8 @@ import bcrypt from "bcryptjs";
 import { cookies } from "next/headers";
 
 // More secure password handling
-const envpassword = process.env.ADMIN_PASSWORD_LIST;
-const passwordList = envpassword ? envpassword.split(",") : [];
+const adminPasswordList = process.env.ADMIN_PASSWORD_LIST;
+const passwordList = adminPasswordList ? adminPasswordList.split(",") : [];
 
 if (passwordList.length === 0) {
   console.error("WARNING: No admin passwords configured in environment variables");
@@ -55,6 +55,7 @@ export async function POST(request) {
         // Set cookie
         cookieStore.set("token", token, {
           httpOnly: true,
+          secure: process.env.NODE_ENV === "production",
           sameSite: "strict",
           maxAge: 60 * 60 * 24 * 7, // 7 days
         });

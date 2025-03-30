@@ -1,7 +1,8 @@
 import { cookies } from "next/headers";
 
 export async function GET(params) {
-  const cookieSet = await cookies().get("token");
+  const cookieStore = await cookies();
+  const cookieSet = cookieStore.get("token");
   if (!cookieSet) {
     return Response.json({
       status: "error",
