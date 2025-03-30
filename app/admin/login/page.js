@@ -4,7 +4,9 @@ import React from "react";
 import { redirect } from "next/navigation";
 
 async function page() {
-  const cookieSet = await cookies().get("token");
+  const cookieStore = await cookies();
+  const cookieSet = cookieStore.get("token");
+  
   if (cookieSet) {
     redirect("/admin/events");
   }
