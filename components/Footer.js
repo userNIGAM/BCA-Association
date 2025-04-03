@@ -12,10 +12,10 @@ const Footer = () => {
           </div>
           <div className="flex flex-col md:flex-row space-x-0 md:space-x-8 mb-6 md:mb-0">
             <a href="/" className="hover:text-blue-700 transition duration-200 text-lg mb-2 md:mb-0">Home</a>
-            <a href="#about" className="hover:text-blue-700 transition duration-200 text-lg mb-2 md:mb-0">About</a>
-            <a href="#news" className="hover:text-blue-700 transition duration-200 text-lg mb-2 md:mb-0">News & Notices</a>
-            <a href="#teams" className="hover:text-blue-700 transition duration-200 text-lg mb-2 md:mb-0">Teams</a>
-            <a href="#contact" className="hover:text-blue-700 transition duration-200 text-lg">Contact</a>
+            <a href="/about" className="hover:text-blue-700 transition duration-200 text-lg mb-2 md:mb-0">About</a>
+            <a href="/news" className="hover:text-blue-700 transition duration-200 text-lg mb-2 md:mb-0">News & Notices</a>
+            <a href="/teams" className="hover:text-blue-700 transition duration-200 text-lg mb-2 md:mb-0">Teams</a>
+            <a href="/contact" className="hover:text-blue-700 transition duration-200 text-lg">Contact</a>
           </div>
           <div className="flex space-x-6">
             <a href="#" aria-label="Facebook" className="hover:text-blue-700 transition duration-200 text-3xl">
