@@ -13,7 +13,7 @@ const teamData = [
     members: [
       {
         name: "Prashant Kafle",
-        image: "https://shorturl.at/Oqqlp",
+        image: "https://i.ibb.co/V00xt1sm/president.jpg",
         designation: "President",
         url: "https://www.prashantkafle.com.np",
       },
@@ -24,7 +24,7 @@ const teamData = [
     members: [
       {
         name: "Ashes Pokhrel",
-        image: "https://shorturl.at/mAsmr",
+        image: "https://i.ibb.co/7dFNLPbB/vicepresident.jpg",
         designation: "Vice President",
       },
       {
@@ -62,14 +62,14 @@ const teamData = [
       {
         name: "Santosh bhandari",
         image:
-          "https://media.licdn.com/dms/image/v2/D5603AQEK5tUYKtQtrQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1721453023090?e=1746057600&v=beta&t=gv44uR5c8fp2C1SGi6YmWdflWrMcQPWUPJ9gi7oeDss",
+          "https://i.ibb.co/KchQ9jTV/santoshvandari.jpg",
         designation: "Tech Lead",
         url: "https://bhandari-santosh.com.np/",
       },
       {
         name: "Shameer Kharel",
         image:
-          "https://media.licdn.com/dms/image/v2/D4D03AQEVHbPBpdGT7A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1715528188313?e=1746057600&v=beta&t=mo6LXko8ZWiA-k76U_pptqOYtaYrv6OarIpnZPGqabI",
+          "https://i.ibb.co/nMYrqqkP/shameerkharel.webp",
         designation: "Tech Member",
       },
       {
@@ -91,7 +91,7 @@ const teamData = [
       {
         name: "Manish Pradhan",
         image:
-          "https://scontent.fbdp2-1.fna.fbcdn.net/v/t39.30808-6/431679939_383773531261853_4653782990386854594_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEGc9XWT7AxJw6niZ8s8WPXvB17ojAoJmq8HXuiMCgmatbI4s8Q64VRgAOGfoHijDz44DfGoRZkY7pjX_cxbpOp&_nc_ohc=FLWV2IgpLPwQ7kNvgGVSdtb&_nc_oc=AdhERdt49HsWP2M4e9nqm5xalYw9UMjYls4eVJLS465XidOgw9zuCL1SntEorbjWnKRF2iUjpUF6P_qFOEJOaYCT&_nc_zt=23&_nc_ht=scontent.fbdp2-1.fna&_nc_gid=AxjSywvYqF7gFZRXnARgeNO&oh=00_AYC_C8mcL6jTtlqRqm8I37-VNhKlSJTPpCqj9XEiDkKZig&oe=67C0D66F",
+          "https://i.ibb.co/NgxszPz0/manishpradhan.jpg" ,
         designation: " Graphics Lead",
       },
       {
