@@ -109,7 +109,7 @@ const teamData = [
             },
             {
                 name: "Rishika Adhikari",
-                // image:"",
+                image:"https://i.ibb.co/Ld9h66GJ/rishika.webp",
                 designation: "Graphics Member",
             },
         ],
@@ -135,7 +135,7 @@ const teamData = [
             },
             {
                 name: "Dibya Laxmi Limbu",
-                // image: ""
+                image: "https://i.ibb.co/HLp6wrCW/dibyalaxmi.jpg",
                 designation: "",
             },
             {
