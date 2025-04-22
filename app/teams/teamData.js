@@ -104,7 +104,7 @@ const teamData = [
             },
             {
                 name: "Roshan Shrestha",
-                // image:"",
+                image:"https://i.ibb.co/F4bKSYCZ/roshanshrestha.jpg",
                 designation: "Graphics Member",
             },
             {
