@@ -25,7 +25,6 @@ const TSParticles = () => {
   }, []);
 
   const particlesLoaded = (container) => {
-    console.log(container);
   };
 
   const options = useMemo(
