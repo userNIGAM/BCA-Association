@@ -1,5 +1,6 @@
 import connectToDB from "@/lib/connectToDatabase";
 import Contact from "@/models/contactModel";
+import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
@@ -78,6 +79,51 @@ export async function GET() {
     return Response.json({
       status: "error", 
       message: "Failed to fetch contact messages"
+    }, { status: 500 });
+  }
+}
+
+export async function DELETE(request) {
+  try {
+    // Get the contact ID from the URL
+    const { searchParams } = new URL(request.url);
+    const id = searchParams.get("id");
+    
+    if (!id) {
+      return Response.json({
+        status: "error",
+        message: "Contact ID is required",
+      }, { status: 400 });
+    }
+    
+    // Connect to database
+    const db = await connectToDB();
+    if (!db) {
+      return Response.json({
+        status: "error",
+        message: "Database connection failed",
+      }, { status: 500 });
+    }
+    
+    // Find and delete the contact
+    const deletedContact = await Contact.findByIdAndDelete(id);
+    
+    if (!deletedContact) {
+      return Response.json({
+        status: "error",
+        message: "Contact not found",
+      }, { status: 404 });
+    }
+    
+    return Response.json({
+      status: "success",
+      message: "Contact deleted successfully",
+    });
+  } catch (error) {
+    console.error("Delete contact error:", error);
+    return Response.json({
+      status: "error",
+      message: error.message || "An error occurred while deleting the contact",
     }, { status: 500 });
   }
 }
