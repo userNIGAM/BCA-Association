@@ -24,6 +24,10 @@ export async function POST(request) {
       }, { status: 400 });
     }
     
+    // Sanitize inputs
+    const sanitizedName = name.trim().replace(/<[^>]*>?/gm, '');
+    const sanitizedMessage = message.trim().replace(/<[^>]*>?/gm, '');
+    
     // Connect to database
     const db = await connectToDB();
     if (!db) {
@@ -35,13 +39,15 @@ export async function POST(request) {
 
     // Get IP address from request headers (optional)
     const forwarded = request.headers.get("x-forwarded-for");
-    const ip = forwarded ? forwarded.split(/, /)[0] : request.headers.get("x-real-ip") || "Unknown";
+    const ip = forwarded
+      ? forwarded.split(/, /)[0]
+      : request.headers.get("x-real-ip") || "Unknown";
 
     // Create new contact record
     const newContact = await Contact.create({
-      name,
+      name: sanitizedName,
       email,
-      message,
+      message: sanitizedMessage,
       ip,
     });
 
