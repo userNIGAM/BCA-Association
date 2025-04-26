@@ -1,5 +1,6 @@
 import MainEvents from "@/components/admin/events/MainEvents";
 import TicketMain from "@/components/admin/tickets/TicketMain";
+import ContactMain from "@/components/admin/contacts/ContactMain";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import React from "react";
@@ -22,10 +23,20 @@ export const fetchTickets = async () => {
   }
 };
 
+export const fetchContacts = async () => {
+  try {
+    const res = await fetch(process.env.NEXT_PUBLIC_URL + "/api/contact");
+    return res.json();
+  } catch (error) {
+    return { status: "error", message: error.message };
+  }
+}
+
 async function page({ params }) {
   const { type } = await params;
   const events = await fetchEvents();
   const tickets = await fetchTickets();
+  const contacts = await fetchContacts();
 
   const cookieset = await (await cookies()).get("token");
   if (!cookieset) {
@@ -40,7 +51,11 @@ async function page({ params }) {
     return <div>Failed to fetch tickets data</div>;
   }
 
-  const option = ["events", "tickets"];
+  if (contacts.status !== "success" && type === "contacts") {
+    return <div>Failed to fetch contacts data</div>;
+  }
+
+  const option = ["events", "tickets", "contacts"];
   if (!option.includes(type)) {
     console.log("type", type);
     return (
@@ -71,6 +86,10 @@ async function page({ params }) {
 
     if (type === "tickets") {
       return <TicketMain tickets={tickets.data} />;
+    }
+
+    if (type === "contacts") {
+      return <ContactMain contacts={contacts.data} />;
     }
   };
 
