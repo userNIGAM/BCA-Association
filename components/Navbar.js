@@ -56,6 +56,11 @@ const Navbar = () => {
             >
               Tickets
             </Link>
+            <Link
+              href="/admin/contacts"
+              className="text-blue-800 font-normal hover:text-blue-600 transition duration-200">
+              Contacts
+            </Link>
           </div>
 
           {/* Social Media Links */}
