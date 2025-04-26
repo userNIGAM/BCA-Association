@@ -85,6 +85,15 @@ export async function GET() {
 
 export async function DELETE(request) {
   try {
+    // Check authentication
+    const session = await getServerSession(authOptions);
+    if (!session || !session.user.isAdmin) {
+      return Response.json({
+        status: "error",
+        message: "Unauthorized",
+      }, { status: 401 });
+    }
+
     // Get the contact ID from the URL
     const { searchParams } = new URL(request.url);
     const id = searchParams.get("id");
@@ -93,6 +102,14 @@ export async function DELETE(request) {
       return Response.json({
         status: "error",
         message: "Contact ID is required",
+      }, { status: 400 });
+    }
+    
+    // Validate MongoDB ObjectId format
+    if (!/^[0-9a-fA-F]{24}$/.test(id)) {
+      return Response.json({
+        status: "error",
+        message: "Invalid contact ID format",
       }, { status: 400 });
     }
     
