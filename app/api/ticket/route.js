@@ -1,8 +1,17 @@
 import connectToDB from "@/lib/connectToDatabase";
 import Ticket from "@/models/ticketModel";
+import { checkAuth } from "@/lib/authMiddleware";
 import { headers } from "next/headers";
 
 export async function POST(request) {
+  const { isAuthenticated } = await checkAuth(request);
+
+  if (!isAuthenticated) {
+    return NextResponse.json(
+      { status: "error", message: "Unauthorized" },
+      { status: 401 }
+    );
+  }
   const res = await request.json();
   const { name, email, semester, issue, anonymous, ip } = res;
   const db = await connectToDB();

@@ -1,7 +1,16 @@
 import connectToDB from "@/lib/connectToDatabase";
 import Event from "@/models/eventModel";
+import { checkAuth } from "@/lib/authMiddleware";
 
 export async function GET() {
+  const { isAuthenticated } = await checkAuth(request);
+
+  if (!isAuthenticated) {
+    return NextResponse.json(
+      { status: "error", message: "Unauthorized" },
+      { status: 401 }
+    );
+  }
   const conn = await connectToDB();
   if (!conn) {
     return Response.json({
